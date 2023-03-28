@@ -20,13 +20,13 @@ public class Hooks extends DataContext {
     
 	@Before
 	public void BeforeScenario() {
-		Context.Driver = new ChromeDriver();
-		Context.Driver.manage().window().maximize();
+		Context.driver = new ChromeDriver();
+		Context.driver.manage().window().maximize();
 		
 	}
 	
 	@After
 	public void AfterScenario() {
-		Context.Driver.quit();
+		Context.driver.quit();
 	}
 }

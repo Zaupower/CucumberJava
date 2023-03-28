@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.*;
 
 import java.util.List;
 
@@ -42,6 +42,6 @@ public class GoogleSearchSteps extends DataContext {
 	@Then("The User is redirected to search results")
 	public void The_User_is_redirected_to_search_results() {
 		List<String> result =((GoogleSearchResultPage) context.currentPage).PageResults();
-		//assertArrayEquals();
+		assertTrue(result.size() > 3);
 	}
 }
