@@ -1,7 +1,7 @@
 package Pages;
 
 import java.util.List;
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -22,7 +22,8 @@ public class GoogleSearchResultPage extends BasePage{
 		List<String> res= new ArrayList<>();
 		
 		for(WebElement result : firstPageSearchResults) {
-			System.out.print(result.getAccessibleName());
+			String text = result.findElement(By.xpath("//div[contains(@class, 'yuRUbf')]//h3[contains(@class, 'LC20lb MBeuO DKV0Md')]")).getText();
+			res.add(text);			
 		}
 		return res;
 	}
