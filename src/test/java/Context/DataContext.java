@@ -6,14 +6,14 @@ import Pages.BasePage;
 
 public class DataContext {
 
-	public WebDriver Driver;
-	public BasePage CurrentPage;
+	public WebDriver driver;
+	public BasePage currentPage;
 		
 	public void SetCurrentPage(BasePage currentPage) {
-		this.CurrentPage = currentPage; 
+		this.currentPage = currentPage; 
 	}
 	
 	public BasePage GetCurrentPage() {
-		return this.CurrentPage;
+		return this.currentPage;
 	}
 }
